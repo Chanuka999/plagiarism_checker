@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plagiarism Checker Tool</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+
+    <main class="layout">
+      <section class="card input-card reveal">
+        <p class="eyebrow">Academic Integrity Assistant</p>
+        <h1>Plagiarism Checker</h1>
+        <p class="sub">
+          Enter your paragraph or assignment draft. We split text into chunks,
+          compare it with web snippets, and return a similarity score.
+        </p>
+
+        <label for="inputText">Input Text</label>
+        <textarea
+          id="inputText"
+          placeholder="Paste your text here..."
+          rows="11"
+        ></textarea>
+
+        <div class="actions">
+          <button id="checkBtn">Check Similarity</button>
+          <span id="statusText">Ready</span>
+        </div>
+      </section>
+
+      <section class="card result-card reveal delay-1">
+        <div class="score-wrap">
+          <canvas id="scoreChart" width="210" height="210"></canvas>
+          <div>
+            <p class="score-label">Similarity Score</p>
+            <h2 id="scoreValue">0%</h2>
+            <p id="providerInfo" class="provider">Provider: -</p>
+          </div>
+        </div>
+
+        <div class="source-head">
+          <h3>Detected Sources</h3>
+          <span id="sourceCount">0 sources</span>
+        </div>
+        <ul id="sourceList" class="source-list"></ul>
+      </section>
+
+      <section class="card reveal delay-2">
+        <div class="source-head">
+          <h3>Chunk Matches</h3>
+          <span id="chunkCount">0 chunks</span>
+        </div>
+        <div id="chunkList" class="chunk-list"></div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>
