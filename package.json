@@ -1,0 +1,23 @@
+{
+  "name": "plagiarism-checker-tool",
+  "version": "1.0.0",
+  "description": "Web plagiarism checker with chunk-based similarity analysis",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js"
+  },
+  "keywords": [
+    "plagiarism",
+    "similarity",
+    "checker"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.8.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}
